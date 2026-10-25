@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: deployment-mysql
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
@@ -46,7 +46,7 @@ kind: Deployment
 metadata:
   name: deployment-wordpress
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: wordpress
