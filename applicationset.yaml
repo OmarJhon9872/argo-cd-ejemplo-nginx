@@ -10,6 +10,8 @@ spec:
   generators:
     - list:
         elements:
+          - name: productivo
+            namespace: wordpress-productivo
           - name: desarrollo
             namespace: wordpress-desarrollo
           - name: pruebas
