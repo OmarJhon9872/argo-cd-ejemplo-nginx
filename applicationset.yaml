@@ -25,7 +25,9 @@ spec:
       source:
         repoURL: git@github.com:OmarJhon9872/argo-cd-ejemplo-nginx.git
         targetRevision: main
-        path: ./wordpress-demo.yaml
+        path: .
+        directory:
+          exclude: 'applicationset.yaml' 
 
       destination:
         server: https://kubernetes.default.svc
