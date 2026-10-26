@@ -1,0 +1,39 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+
+metadata:
+  name: wordpress-applicationset
+  namespace: argocd
+
+spec:
+  generators:
+    - list:
+        elements:
+          - name: desarrollo
+            namespace: wordpress-desarrollo
+          - name: pruebas
+            namespace: wordpress-pruebas
+
+  template:
+    metadata:
+      name: 'wordpress-{{name}}'
+
+    spec:
+      project: default
+
+      source:
+        repoURL: https://github.com/OmarJhon9872/argo-cd-ejemplo-nginx.git
+        targetRevision: main
+        path: .
+
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{namespace}}'
+
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
