@@ -1,7 +1,7 @@
-#apiVersion: v1
-#kind: Namespace
-#metadata:
-#  name: wordpress-ns-jon
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: wordpress-ns-jon
 
 #---
 
