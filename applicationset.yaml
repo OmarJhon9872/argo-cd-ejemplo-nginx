@@ -10,8 +10,8 @@ spec:
   generators:
     - list:
         elements:
-          - name: desarrollo
-            namespace: wordpress-desarrollo
+          #- name: desarrollo
+          #  namespace: wordpress-desarrollo
           - name: pruebas
             namespace: wordpress-pruebas
 
