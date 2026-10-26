@@ -76,10 +76,9 @@ kind: Service
 metadata:
   name: service-wordpress
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: wordpress
   ports:
     - port: 80
-      targetPort: 80
-      nodePort: 30080
+      targetPort: 80      
