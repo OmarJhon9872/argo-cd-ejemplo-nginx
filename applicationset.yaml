@@ -23,7 +23,7 @@ spec:
       project: default
 
       source:
-        repoURL: https://github.com/OmarJhon9872/argo-cd-ejemplo-nginx.git
+        repoURL: git@github.com:OmarJhon9872/argo-cd-ejemplo-nginx.git
         targetRevision: main
         path: .
 
